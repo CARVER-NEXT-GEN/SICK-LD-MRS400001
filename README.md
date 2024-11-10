@@ -76,7 +76,6 @@ cd SICK-LD-MRS400001/sick_scan_ws/
 **Step by Step**
 
 ~~~bash
-cd SICK-LD-MRS400001/sick_scan_ws/
 colcon build --packages-select libsick_ldmrs --event-handlers console_direct+
 source install/setup.bash
 colcon build --packages-select sick_scan_xd --cmake-args " -DROS_VERSION=2" " -DLDMRS=0" " -DRASPBERRY=0" --event-handlers console_direct+
