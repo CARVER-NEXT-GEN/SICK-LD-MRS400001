@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/beamkeerati/sick_scan_ws/install/sick_scan_xd/include/**",
+        "/home/beamkeerati/FRA501/Week5-uros/uros_ws/install/micro_ros_agent/include/**",
+        "/home/beamkeerati/FRA501/Week5-uros/uros_ws/install/micro_ros_msgs/include/**",
+        "/home/beamkeerati/FRA501/Week5-uros/uros_ws/install/imu_interfaces/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/beamkeerati/sick_scan_ws/src/sick_scan_xd/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
