@@ -70,7 +70,7 @@ git clone https://github.com/CARVER-NEXT-GEN/SICK-LD-MRS400001.git
 **Change Directory**
 
 ```bash
-cd SICK-LD-MRS400001/sick_scan_ws/
+cd SICK-LD-MRS400001-3D-LiDAR/sick_scan_ws/
 ```
 
 **Step by Step**
