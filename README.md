@@ -44,7 +44,7 @@ Next, disconnect the device, re-plug it, and complete
 
 ### Optional: Visual Point Cloud on SOPAS
 
-Click on the "Login" button, then select "Maintainance." Enter the password "main." If you desire an alternative mode, please refer to the image below.
+Click on the "Login" button, then select "Maintenance" Enter the password "main." If you desire an alternative mode, please refer to the image below.
 
 ![alt text](images/pass.png)
 ![alt text](images/login.png)
@@ -59,3 +59,47 @@ Then, double-click on the Field Evaluation Monitor. After that, click on the too
 
 ## Step 2: Setup Lidar in ROS2 (Ubuntu)
 
+### Clone
+
+~~~bash
+git clone https://github.com/CARVER-NEXT-GEN/SICK-LD-MRS400001.git
+~~~
+
+###  Compile
+
+~~~bash
+cd SICK-LD-MRS400001/sick_scan_ws/
+colcon build
+source install/setup.bash
+~~~
+
+### Run
+
+**Ensure that you have configured Ethernet correctly.**
+![alt text](images/details.png)
+![alt text](images/ipv4.png)
+![alt text](images/ipv6.png)
+
+**Initialize Lidar:** In Terminal 1
+
+~~~bash
+ros2 launch sick_scan_xd sick_ldmrs.launch.py hostname:=169.254.23.98 port:=2111
+~~~
+
+You can change ```hostname:=``` to match SOPAS settings you have set up previously.
+
+**Open RVIZ:** In Terminal 2
+
+~~~bash
+source ~/sick_scan_ws/install/setup.bash
+ros2 run rviz2 rviz2 -d ~/sick_scan_ws/src/sick_scan_xd/launch/rviz/sick_ldmrs.rviz
+~~~
+![alt text](images/terminal.png)
+![alt text](images/rviz.png)
+
+## Other ways
+
+You can also use the following links to fix or set parameters.
+
+- [sick_scan_xd](https://github.com/SICKAG/sick_scan_xd?tab=readme-ov-file)
+- [LD-MRS400001](https://www.sick.com/us/en/catalog/products/lidar-and-radar-sensors/lidar-sensors/ld-mrs/ld-mrs400001/p/p112355?tab=detail)
