@@ -1,4 +1,4 @@
-# SICK-LD-MRS400001
+# SICK-LD-MRS400001-3D-LiDAR
 
 The SICK LD-MRS400001 is a versatile 3D LiDAR sensor designed for outdoor applications, offering a wide field of view and multiple scan layers for comprehensive environmental mapping. It is commonly utilized in autonomous vehicles, robotics, and industrial automation for tasks such as object detection, collision avoidance, and navigation.
 
