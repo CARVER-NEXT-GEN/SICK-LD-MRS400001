@@ -67,10 +67,28 @@ git clone https://github.com/CARVER-NEXT-GEN/SICK-LD-MRS400001.git
 
 ###  Compile
 
+**Change Directory**
+
+```bash
+cd SICK-LD-MRS400001/sick_scan_ws/
+```
+
+**Step by Step**
+
 ~~~bash
 cd SICK-LD-MRS400001/sick_scan_ws/
+colcon build --packages-select libsick_ldmrs --event-handlers console_direct+
+source install/setup.bash
+colcon build --packages-select sick_scan_xd --cmake-args " -DROS_VERSION=2" " -DLDMRS=0" " -DRASPBERRY=0" --event-handlers console_direct+
+source install/setup.bash
 colcon build
 source install/setup.bash
+~~~
+
+**Or 1 command**
+
+~~~bash
+colcon build --packages-select libsick_ldmrs --event-handlers console_direct+ && source install/setup.bash && colcon build --packages-select sick_scan_xd --cmake-args " -DROS_VERSION=2" " -DLDMRS=0" " -DRASPBERRY=0" --event-handlers console_direct+ && source install/setup.bash && colcon build && source install/setup.bash
 ~~~
 
 ### Run
@@ -80,9 +98,11 @@ source install/setup.bash
 ![alt text](images/ipv4.png)
 ![alt text](images/ipv6.png)
 
+
 **Initialize Lidar:** In Terminal 1
 
 ~~~bash
+source ~/sick_scan_ws/install/setup.bash
 ros2 launch sick_scan_xd sick_ldmrs.launch.py hostname:=169.254.23.98 port:=2111
 ~~~
 
